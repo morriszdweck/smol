@@ -8,6 +8,7 @@ Smol- stays in one Python file and uses only the standard library. Give it a tas
 
 Use Smol- when you want an agent loop without a framework around it:
 
+- **Minimal and cheap** Because of the lack of excessive and unnecessary tools, it costs significantly cheaper compared to other coding agents.
 - **Small enough to inspect.** The whole agent is a single script you can read, copy, or modify.
 - **No dependency setup.** There is no virtual environment, package install, or SDK to maintain.
 - **Provider-independent.** Point it at any compatible `/v1` endpoint and choose the model ID that endpoint exposes.

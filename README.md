@@ -1,10 +1,10 @@
-# Smol-
+# Smol
 
 A tiny coding agent that connects an OpenAI-compatible chat model to your shell.
 
 Smol- stays in one Python file and uses only the standard library. Give it a task, let the model propose a command, see that command in the terminal, and feed the output back into the conversation. It repeats this loop until the task is finished.
 
-## Why use Smol-
+## Why use Smol
 
 Use Smol- when you want an agent loop without a framework around it:
 

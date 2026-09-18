@@ -57,12 +57,10 @@ def login():
         ms = []
     if ms:
         print("models:")
-        for i, m in enumerate(ms):
-            print("  %2d) %s" % (i + 1, m))
-        pick = input("pick a model # or type an id: ").strip()
-        if pick.isdigit() and 0 < int(pick) <= len(ms):
-            c["model"] = ms[int(pick) - 1]
-        elif pick:
+        for m in ms:
+            print("  - %s" % m)
+        pick = input("model id: ").strip()
+        if pick:
             c["model"] = pick
     if not c.get("model"):
         c["model"] = input("model id: ").strip()
@@ -107,7 +105,7 @@ def main():
         return
     c = conf()
     if not c["base"] or not c["model"]:
-        print("Smol- isn't configured. run: python3 smol.py login")
+        print("Smol- isn't configured. run: smol login")
         return
     print("Smol-  %s  @  %s" % (c["model"], c["base"]))
     msgs = [{"role": "system", "content": SYS}]

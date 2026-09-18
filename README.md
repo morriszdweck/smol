@@ -1,9 +1,5 @@
 # Smol-
 
-```sh
-command -v python3 >/dev/null 2>&1 || { if command -v brew >/dev/null 2>&1; then brew install python; elif command -v apt-get >/dev/null 2>&1; then sudo apt-get update && sudo apt-get install -y python3; elif command -v dnf >/dev/null 2>&1; then sudo dnf install -y python3; elif command -v pacman >/dev/null 2>&1; then sudo pacman -Sy --noconfirm python; else echo 'python3 is required; install it and rerun this command.' >&2; exit 1; fi; } && mkdir -p ~/.local/bin && curl -fsSL https://raw.githubusercontent.com/morriszdweck/smol/main/smol.py -o ~/.local/bin/smol && chmod +x ~/.local/bin/smol
-```
-
 A tiny coding agent that connects an OpenAI-compatible chat model to your shell.
 
 Smol- stays in one Python file and uses only the standard library. Give it a task, let the model propose a command, see that command in the terminal, and feed the output back into the conversation. It repeats this loop until the task is finished.
